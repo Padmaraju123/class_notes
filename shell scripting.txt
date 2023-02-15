@@ -1,0 +1,31 @@
+Linux kernal:it is interface between software(shell) and hardware (cpu,printers memoty etc.,)
+
+kernal: it is a software which is present in any os it takes commands from shell to hardware or vice versa
+shell: it is software nothing gui in windows in linux terminal which runs commands those commands send to hardware by kernal
+application: it is software/program which an user want to run in the device.
+
+user-->application-->shell--->kernel--->hardware
+
+note: shell and kernel have in any os
+
+SHELL:= it is like a container which interface between user and kernel
+
+1)windows GUI is a shell
+2)Linux KDE GUI is a shell
+3)Linux sh,bash etc., is a shell
+
+Types of Linux shells
+1)Gnome
+2)KDE 
+both are GUI shells they are install while installing linux so we are doing our work with mouse because of this shells
+and these are the interfaces between user and kernel
+3)sh
+4)bash
+5)csh and tcsh
+6)ksh 
+these are actually terminal shells in linux
+
+we can check it by command line cat /etc/shells
+
+
+

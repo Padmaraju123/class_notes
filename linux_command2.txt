@@ -1,0 +1,343 @@
+63. Access Control List
+
+ACL=Access control list provides an additional, more flexible permission mechanism
+for file systems.It is designed to assist with Unix file permission.ACL allows you
+to give permissions for any user or group to any disc resources.
+
+Use of ACL:
+1)Think of a scenario in which a particular user is not a member of group
+created by you but still you want to give some read or write access,how can you
+do it without making user a member of group,here comes in picture acl 
+2) commands to assign and remove acl permission are
+  1) setfacl
+  2) getfacl (it shows the complete details of file)
+
+# to add permission for user
+  setfacl -m u:user:rwx filepath
+
+# to add permission for a group
+  setfacl -m g:group:rwx filepath
+
+# to remove specific entry
+   setfacl -x u:user filepath 
+
+# to remove all entries
+  setfacl -b filepath
+
+# to allow all files or directories to inherit ACL entries from the directory it is within
+  setfacl -dm "entry" filepath
+
+note:
+1) As you assign the ACL permission to a file/directory it adds +sign at the end of the permission
+2) Setting w permission with ACL does not allow to remove a file.
+3)padmaraju comes others inside the root files
+
+
+64. Help Commands 
+
+There are 3 types of Help Commands
+# whatis command
+# command --help
+# man command
+
+65.Tab completion and up Arrow
+# Hitting Tab key completes the available commands, files or directories.
+  ex:chm tab
+  ex: ls tab
+  ex: cd Des tab
+# hitting up arrow key on the keyboard returns the last command.
+
+
+66.Adding text to files
+
+# There are 3 ways to add text to a file
+
+1) vi 
+
+2) Redirect command outout > or >>
+
+3) echo > or >>
+   ex: echo "write text here" > filename
+   ex: echo "write text here" >> filename (used this command to add text to exixting file) 
+   ex: ls -l > filename  (here all files and directories as text inside the file)
+   note: to see the content inside of the file we use cat command
+    ex:cat filename
+
+67.Input and output redirects
+
+#There are 3 redirects in linux
+ 1) Standard input(stdin) and it has file descriptor number as 0
+ 2) Standard output(stdout) and it has file descriptor number as 1
+ 3) Standard error(stderr) and it has file descriptor number as 2 
+
+1) Output(stdout)-1 
+  # by default when running a command its output goes to the terminal
+  # The output of a command can be routed to a file using > symbol
+    ex: ls -l > filename
+    ex: pwd > filename 
+  # If using the same file for additional output or to append to the same file then use >>
+    ex: ls -l >> filename
+    ex: echo "Sdsds" >> filename
+
+note: ls -la (here a gives us all files include .files also)
+
+# Input(stdin)=0
+  1) Input is used when feeding file
+    ex: cat < filename
+
+# Error(stderr)-2
+  1)If the command produced any error on the screen then it is considered stderr
+     # We can use redirects to route errors from the screen
+      ex: ls -l /root > filename (here permission denied bez not a root)
+          ls -l /root 2 > filename (here what ever error occur above command will go into this filename)
+
+ 
+ 
+68.Standard Output to a file (tee command)
+
+# "tee" command is used to store and view (both at the same time) the output of any command.
+    echo "text here " | tee filename 
+
+# if you want to append text to existing file with tee command
+    echo "text here " | tee -a filename
+
+# to know the how many characters has the text of the file
+    wc -c filename
+
+
+69.Pipes
+
+# A pipe is used by the shell to connect the output of one command directly
+to the input of another command.
+
+The symbol for pipe is the vertical bar(|)
+ syntax: command | command
+  ex: ls -ltr | more 
+  (here the output of ls -ltr goes to input of more command 
+    the more is used to display the data into one page.)
+
+70.file maintainence commands
+
+#cp 
+
+1) copying one file into another file so what ever have in first file will go into second file
+   cp file1 file2
+
+2) copying one file into another location
+  cp file1 filepath / cp file1 directory
+
+#rm 
+
+1)to remove the regular file we use rm command
+  rm filename
+
+#mv 
+1) to rename the regular file we use mv command
+  mv oldnamefile newnamefile
+
+2)to change the location of file into another location
+  mv  filepath/filename  filepath
+
+#mkdir
+
+1) to create directory by using this command
+  mkdir directoryname 
+
+#rmdir or rm -r
+
+1) rmdir is used to remove the single directory which doesn't contain any other files and Directories
+  rmdir directoryname
+
+2)rm -r is used to forcefully remove the directory as well as inside directories also
+  rm -r directoryname
+
+#chgrp
+note : to go with this command we need to be root
+1) it is used to change the group ownership of the file/direc
+   chgrp root filename
+
+#chown
+1) to change user ownership we used this command
+  chown root filename 
+
+note: to change both once we use 
+  chown root : root filename
+
+
+71. File Display Commands
+
+# cat
+ 1) to see the text inside of the file.
+    ex: cat filename
+
+# more
+ 1) to show the description one page only on the screen.
+    ex: more filename
+
+# less
+  1)it will give the description with one line when you enter.
+   ex: less filename
+
+# head
+  1)if you want to see desire lines of the upper description we use head command.
+   ex:head -mention_number filename
+
+# tail 
+  1) if you want to see desire lines of the lower description we use tail command.
+   ex: tail -mention_number filename
+
+
+
+72.Filters/Text Processing Commands
+
+# CUT
+ 1) Cut is a command line utility that allows you to cut parts of the lines from
+specified files or piped data and print the result to standard output.It can be used to cut parts of a line
+by delimiter.byte position and character.
+  
+# cut filename == not work
+
+# cut --version == gives the version
+
+# cut -c1 filename == list one character (c1 so first character ,c2 second character)
+
+# cut -c1,3,4 filename == list one,third,fourth characters of the file.
+
+# cut -c1-5 filename  == list range of characters 
+
+# cut -c1-3,7-9 filename  == list specific range of characters
+
+# cut -b1-4 filename == list the range with byte size
+
+# cut -d: -f 6 filename == it shows range after 6 field
+  ex: cut -d: -f 6 /etc/passwd 
+  (here : is used to divide )
+
+#cut -d: -f 6-7 filename == it shows range between 6 to 7 field
+  ex: cut -d: -f 6 /etc/passwd 
+  (here : is used to divide )
+
+# ls -l | cut -c2-5 == it will shows the listing between 2 to 5
+
+@@ AWK 
+
+# awk is a utility/language designed for data extraction.Most of the time is used to extract fields from
+a file or from an output.
+
+1) awk --version     =   gives the version
+2) awk '{print $1}' filename ==  gives the first field 
+3) awk '{print $1,$3}' filename == gives the first and third fields
+4) awk '{print $NF}' filename == gives the last field
+5) awk '/word/ {print}' filename == search the specific word
+6) awk -F: '{print $1}' filepath == gives the field by limiter
+7) echo "hello Tom" | awk '{$2="word"; print $0}' == here replace tom with given word
+8) awk 'length($0) > 15' filename == gives the words in the file greater 15 characters
+9) ls -l | awk '{if($9 == "word")} print $0}' == get the file that matches the 9th field is equal to word
+10) ls -l | awk '{print Nf}' == gives the no of fields have of each line
+
+@@ GREP /EGREP
+
+#The grep command which stands for "global regular expression print" processes text line by line and prints
+any lines which match a specified pattern
+
+1) grep --version          gives the version
+2) grep keyword filename   search for a keyword in a file
+3) grep -c keyword filename   search for a keyword and count
+4) grep -i keyword filename   search for a keyword ignore case-sensitive
+5) grep -n keyword filename   Display the matched lines and their line numbers
+6) grep -v keyword filename   display the unmatched lines 
+7) grep keyword filename | awk '{print $1}' === search for a keyword and then only give the 1st field
+8) ls -l | grep Desktop      === Search for a keyword and then only gives that lines
+9) egrep -i "keyword1|keyword2" filename == gives the lines which matches either keyword
+10) egrep -i "key1|key2...|keyN" filename == gives the lines which matches the either keyword
+
+
+76. Sort/Uniq Commands
+# sort command sorts in alphabet order
+# Uniq Command filters out the repeated or Duplicate lines
+
+1)sort --version
+2)sort filename (here the textlines inside the file assign alphabet order )
+  ex: sort filename (to sort the text inside by giving direct filename)
+  ex: sort filepath/filename (to sort after the absolute path)
+ 
+3)sort -r filename (here assign in reverse order)
+  ex: sort filename    (reverse order)
+  ex: sort filepath/filename     (reverse order)
+
+4) sort -k2 filename (here to order by second field text)
+   sort -k2 filepath/filename  (here to do by filepath after)
+   ls -ltr | sort -k9  
+
+5) sort file | uniq  (always sort first before using their line numbers)
+6) sort file | uniq -c  (sort first then uniq and list count)
+7) sort file | uniq -d  (only show repeated lines)
+
+@@ WC 
+
+#The command reads either standard input or a list of files and generates
+  1)newline count
+  2)word count
+  3)byte count 
+1)wc filename 
+2)wc -l filename  (gives line count)
+3)wc -w filename  (word count)
+4)wc -c filename  (byte count)
+5)ls -l | wc -l 
+6)grep keyword | wc -l
+7)ls -l | grep key | wc -l
+
+78.Compare Files
+
+#diff (line by line)
+ ex: diff file1 file2
+
+# cmp (byte by byte)
+ ex: cmp file1 file2
+
+79.Compress and uncompress
+ 
+# tar (used to compress the files like zip in windows)
+ ex: tar cvf filename.tar filepath
+
+# tar xvf filename.tar (it is used to unzip the file)
+
+# gzip (it is same as tar but much better than tar)
+  ex: gzip filename.tar
+
+#gzip -d / gunzip  (it is used to unzip of file.tar.gz only)
+  ex: gzip -d file.tar.gz 
+  ex: gunzip file.tar.gz
+
+80.Truncate File Size
+
+# The Linux truncate command is often used to shrink or extend the size of 
+a file to the specified size.
+
+note:Truncate command not to compress the file size it is used as to chop the data 
+inside of the file.
+
+command:truncate -s filesizetocompress filename
+ex: truncate -s 10 filename
+
+
+
+
+C:\Users\HP\AppData\Local\Programs\Python\Python310
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

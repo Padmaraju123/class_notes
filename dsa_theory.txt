@@ -1,0 +1,57 @@
+data structure: it is a storage that is used to store and organize data.it is a way of
+arranging data on a computer so that it can be accessed and updated efficiently.
+
+# it's not only used for organizing the data. it is also used for processing,retrieving and
+storing data.
+
+#data structures are an integral part of computers used for the arrangement of data in memory
+
+difference between data type and data structures
+
+datatype 
+# the data type is the form of a 
+variable to which a value can be
+assigned.it defines that the particular variable
+will assign the values of the given data type only
+
+data structure
+#it is a collection of different kinds of data
+that entire data can be represented using an 
+object and can be used throughout the program
+
+data type
+#there is no time complexity in the case of
+data types
+
+dsa
+#in dsa time complexity plays an important role
+
+data type
+#data type examples are int,string,float,etc,.
+
+das
+#array,stack,queues etc,.
+
+
+## data structures has many different uses in our daily life which is used 
+for different mathematical and logical problems
+## by using dsa one can organize and process a very large amount of data
+in a relatively short period.
+
+
+Linear data structure
+## in which data elements are arranged sequencially or linearly,where
+each element is attached to its previous and next adjacent elements
+
+Static data structure
+## it has fixed memory size.it is easier to access the elements in a
+static data structure
+ex: array
+
+Dynamic data structure
+## it has no fixed memory size. It can be randomly updated during the run time
+which may be considered efficient concering space complexity of the code
+ex: queue,stack,linked list
+
+
+

@@ -1,0 +1,146 @@
+1)how to create a file in linux
+     # touch filename
+     # cat > filename        (but it give to access to write with in the file enter ctrl+d to exit)
+
+2)how to create multiple files
+    # touch file1 file2 .... fileN
+
+3)to change the access time of a file
+    #touch -a filename
+    (note:to see just command :stat filename)
+
+
+3)to change the modify time of a file
+    #touch -m filename
+    (note:to see just command :stat filename)
+
+3)how to create a file in a folder
+    # touch folder1/raju.txt
+    note: you must be present in current directory and all folder1 must be created
+
+4)how to create a multiple files in different directories
+    # touch folder1/raju1.txt  folder2/raju2.py
+
+5)how to create a file in a path
+    # touch folder1/folder2/raju.txt
+    note: you must be present in current directory and all folder1 must be created
+
+6)how to create a multiple files in different paths
+    # touch folder1/folder2/raju1.txt  folder2/folder3/raju2.py
+
+7)how to delete a file
+    # rm filename
+
+8)how to delete multiple files
+    # rm file1 file2 file3 .... fileN 
+
+9)how to delete file present in a folder
+    # rm folder1/raju1.txt
+
+10)how to delete files with different folders
+    # rm folder1/raju1.txt folder2/raju2.txt
+
+11)how to create folder 
+    # mkdir folder1
+
+12) how to multiple folders 
+    # mkdir folder1 folder2
+
+13)how to create files/folders by path
+    # mkdir  f/ad/folder1  f/ad/folder2/raju.txt 
+    note : the path folders must be created 
+
+14)how to delete a folder empty
+    # rmdir folder1
+
+15)to delete non-empty files/folders
+    #rm -rf filename
+    #rm -rf folder1
+
+
+15) how to delete folders
+    #rmdir folder1 folder2 
+
+16)to remove the parent folder and its child directories
+    #rmdir -p folder1/folder2
+    #rmdir -pv folder1/folder2
+
+16)how to delete folders by path
+   #rmdir a/b/c/folder1 a/b/c/folder2
+
+17)removes non-empty directories including parent & sub directories
+    #rm -rp
+
+18)to remove empty directories
+    #rm -r
+
+17)to create a file we have another command cat for this it will redirect to you write into the file
+     # cat > filename        (but it give to access to write with in the file enter ctrl+d to exit)
+
+18)to see the text in the file
+    #cat filename
+
+19)to write something in the existing file
+    # cat >> filename
+
+20)to concatenate the content of both files into another file
+    # cat file1 file2 > file3
+
+21)to see the content reverse order in a file
+    # tac filename
+
+22)to see the time stamp of a file(access time,modify time,change time)
+    stat filename  
+
+
+VI EDITOR
+1)A Programmer text EDITOR
+2)it can be used to edit all kinds of plain test
+it is specially useful for editing programs mainly used for linux programs
+
+
+#:w = to save
+#:wq or :x = to save & quit
+#:q = quit
+#:q! = force quit not saved
+
+1) to create a file with vi editor 
+    #vi filename
+2)firstly enter i to write something because you will be insert mode
+3)to after written something to get back to vi editor enter ESC
+4)to see the text of the file 
+    cat filename
+
+5)to enter into the folder
+    #cd foldername
+
+5)to get back from the one folder
+    #cd ..
+
+6)to get back three folders back
+    #cd ../../..
+
+7)to enter into multiple directories
+    #cd folder1/folder2/folder3
+
+8)how to hidden the files/directories
+    #touch .filename
+
+8)how to create the hidden folder
+    #mkdir .foldername
+
+    note: we can perform all above concepts for hidden files also
+
+9)to see the hidden file/directories
+    #ls -a
+
+10)how to copy the text of one file to another file
+    #cp file1 file2
+
+11)how to cut & paste the text from one file to another file
+    # mv file1 file2
+
+    note : after the command the file1 will deleted
+
+12)to rename a file nothing but cut & paste
+    #mv file1 file2 

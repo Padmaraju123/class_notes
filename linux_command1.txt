@@ -1,0 +1,311 @@
+cd = change directory
+pwd = print working directory
+ls = list 
+cd .. = used to one step back from the present directory
+su - = used to change my user into root account.su(switch user)
+
+1) if you enter only cd we enter into /root bez we are root 
+2) if you enter only cd then we enter into /home/padmaraju bez
+we are /padmaraju
+
+There are three types of root on linx system
+
+1) Root Account: root is an account or a username on linux
+machine and it is the most powerful account which has access
+to all commands and files.(like system administration in windows)
+
+2)root(/): The very first directory in linux is also referred 
+as root directory.
+
+3) root home directory: The user account also has a directory
+located in /root which is called root home directory.
+
+
+main points
+- = regular file
+d = directory 
+l = link
+c = socket file/pendrive
+p = named pipe
+b = block device
+
+
+changing passwords
+command := passwd username  (change the user password if you are user)
+command := passwd  (change the root password if you are root)
+
+File system paths
+
+There are two paths to navigate to a file system
+
+1)Absolute path:An absolute path always begins with a / .this
+indicates that the path starts at the root directory
+ex: cd /var/log/samba
+
+2) Relative path : A relative path does not begin with a /
+it identifies a location relative to your current position 
+ex:cd /var
+   cd log
+   cd samba
+
+Creating files and directories
+
+Creating files
+
+1) touch filename = create a empty file
+
+   ex: touch directory/emptyfilename   (here we have directory name)
+   ex: touch Documents/file1  Downloads/file2  Music/file3    (to create file by choosing different directories)
+
+
+   touch filename1 filename2......filenameN = create N number of empty files. (for multiple files no option only this thing)
+
+
+2) cp existingfile newfile = Is used to copy text of existingfile and created into newfile.
+
+   ex: cp filepath/oldname  filepath/newfile     (here by doing absolute path to copy the file)
+   ex: cp oldfile newfile                        (here directly copy the file into newfile)
+   ex: cp directory/oldfile  filepath/newfile    (here copying the file in directory with its text and pasted by creating a newfile in given filepath)
+   ex: cp filepath/oldfile   directory/newfile   (here copying the file in filepath with its text and pasted by creating a newfile in given directory)
+
+3) vi 
+
+Creating directories
+
+1) mkdir filename = create a empty directory
+   ex: mkdir Documents/direc1  Downloads/direc2   (here to create a different directories by choosing previous directories but you are in same place to create)
+
+   ex: mkdir filepath/newdirectory  filepath/newdirectory   (here creating directories by their file path)
+
+   ex := mkdir filename1 filename2 ..... filenameN = create a empty directories
+
+
+#ls -ltr command used for assign the files/directories bottom 
+which are created recently.
+
+Copying Directories
+
+1)cp -R source_folder destination_folder
+  ex: cp -R filepath/directory  filepath/directory
+  ex : cp -R directory/olddirectory  filepath/newdirectory
+  ex: cp -R filepath/olddirectory    directory/newdirectory
+
+
+Linux File Types
+
+-  = Regular file
+d  = Directory
+l  = link
+c  = specialfile or device file  (ex: if you connect like memory to system)
+s  = socket 
+p  = named pipe
+b  = Block device
+
+51.Find Files and Directories
+
+Two main commands are used to find files/directories
+
+1) find     ex: find current_directory -name filename/directory
+            ex: find directorypath  -name filename/directory 
+
+2) locate   ex: locate filename
+
+note: if you want to search or find a file/directory from root/ then we are became root
+for locate no need root
+
+52.Difference between find and locate
+
+# locate uses a prebuilt database, which should be
+regularly updated, while find iterates over a filesystem
+to locate files.Thus locate is much faster than find,but
+can be inaccurate if the database is not updated
+
+the commands use to update the database
+1)run command "updatedb" before run the command become a root firstly
+
+# by using locate command we can find any file in other location
+# by using find command you have in current directory to find the file
+
+53.Changing Password
+# you should change your initial password as soon as you login
+
+command: passwd userid (to change the userid password)
+command : passwd (to change login password)
+
+# old password: enter your current password
+# new password: enter your new password
+# retype new password: re-enter your new password
+
+note: if you want to change the user password you have to became a root
+
+54.wild cards
+# a wild card is a character that can be used as a substitute 
+for any of a class of characters in a search.
+
+ex:
+1) * = represents a zero or more characters
+   ex: you created a files like abcd1eee,abcd2eee,abcd3eee
+      if you want to delete all files 
+      so rm abcd* (here it will delete all files with abcd with out any consideration
+       after that)   
+
+2) ? = represents a single characters
+     ex: you created fiels like axyzjdjfjdf,dxyzldflf,fxyzdfkgmmd
+        if you want to list these files then
+         ls -l ?xyz* 
+3) {} = create a range of files 
+    ex: to create an N number of files with single line
+        touch abcd{1..10}-xyz
+4) [] = show the range of files inside any character
+    ex : ls -ltr *[dca]*
+5) to delete some files 
+   ex : rm *xy* (here the x and y should be together)
+
+
+55.Soft links and hard links
+
+inode = Pointer or number of a file on the hard disk
+ # if you create a file you named it but that name not to understand the computer 
+ so that computer fixed a unique no to the file on hard disk
+for understand that no is inode.
+
+# to know the inode no of a file 
+  ls -ltri  (here "i" denotes the inode) 
+
+softlink = link will be removed if file is removed or renamed.
+command = ln -s locationpath (do in /tmp directory)
+
+
+hard link = deleting renaming or moving the original file will
+not affect the hard link.
+command = ln
+
+finally if you change/delete any thing to the source of softlink it will automatically 
+affect to the softlink in /tmp
+but for hard link it won't effect the destination file in /tmp
+
+
+
+
+note: you cannot create soft or hard link within the same directory
+with the same name.that is why we will create lonks in /tmp directory.
+The inode no is different in /tmp and current directory 
+
+# to write a text in file use command
+  echo "text here" > filename
+
+# to add text to a file 
+  echo "text here" >> filename
+
+# to read the text inside the file 
+  cat filename
+
+
+module 4: LINUX FUNDAMENTALS
+
+59.Commands syntax
+
+commands typically have the syntax:
+ command option arguments
+
+options:
+#modify the way that a command works
+#usually consist of a hyphen or dash followed by a single letter
+# some commands accepts multiple options which can usually be grouped
+together after a single hyphen.
+
+Arguments:
+# Most commands are used together with one or more arguments.
+# some commands assume a default argument if none is supplied.
+# arguments are optional for some commands and required by other.
+
+ex: ls(command)  -l(one option after -)   filename(argument)
+ex: ls(command)  -ltr(group option after-)  filename(argument)
+
+#to remove the directory forcefully use command
+  rm -r directoryname    (to delete the direct directory)
+  rm -r filepath/directory  filepath/directory  (to delete the directory by specify the absolute path)
+
+# to know the particular command use this command
+  man(manual) command
+  ex:man ls 
+
+60.file permissions
+
+# Unix is a multi-user system.Every file and directory in your account can be 
+protected from or made accessible to other users by changing its access permission.
+Every user has responsibility for controlling access to their files.
+
+
+There are 3 types of permissions
+1) r - read   (without this we can't read inside the file)
+2) w - write (without this we delete and write something inside the file/directory)
+3) x - execute (running a program) note:for directory default as x so that we can cd command works
+
+note: for normal files the x not placed only for script files the x have but the directories have it because we do cd on it.
+
+Each permission can be controlled at three levels:
+1) u - user (yourself)
+2) g - group (can be people in the same project)
+3) o - other (everyone on the system) 
+
+# Command to change the permission
+
+ chmod g-w filename (here we are delete the write permission to the group )
+ chmod u+r filename (here we are add the read permission to the group)
+ chmod uo+x filename (here we are adding execute permission to the user and oher)
+ chmod ugo+wxr filename (here we are adding all permission to the all)
+ chmod a-r filename (here a stands for all)
+
+
+61.Permission using Numeric Mode
+
+# The table below assigns numbers to permissions types
+Number       permissiontype     symbol
+0            No permission      ---
+1            Execute            --x 
+2            Write              -w- 
+3            Execute+Write      -wx 
+4            Read               r--
+5            Read+Execute       r-x
+6            Read+Write         rw-
+7            Read+Write+Execute rwx
+
+ex: chmod 777 filename = -rwxrwxrwx
+ex: chmod 657 filename = -rw-r-xrwx
+ex: chmod 000 filename = ----------
+
+62.File ownership commands 
+
+#There are 2 owners of a file or directory
+ User and group
+
+# Command to change file ownership
+
+  chown (change the ownership of a file)
+  
+  ex:chown specify_name(root) filename  
+
+  chgrp (change the group ownership of a file)
+
+note: you must be root to change the ownership 
+
+# if you -R then not only change the ownership of that directory what ever files and directories 
+reflect it this is called Recursive ownership.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

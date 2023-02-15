@@ -1,0 +1,23 @@
+Opening a file:
+  1)opening a file refers to getting the file ready either for reading or writing.
+  2)This can be done using the open() function.
+  3)This function returns a file object and takes two arguments 
+    one that accepts the filename and another that accepts the mode (access mode)
+  4)Access modes govern the type of operation possible in the opened file.it refers
+   to how the file will be used once its opened
+  5)it is done using the open function.No module is required to be imported for this function
+  6)The file should exist in the same directory as the python program file else full
+   address of the file should be written on place of filename
+
+Closing a file:
+  # close() function closes the file and frees the memory space acquired by that file. it is used
+    at the time when the file is no longer needed or if it is to be opened in a different file mode.
+
+Reading from a file:
+
+There are three ways to read data from a text file.
+
+@ read(): Returns the read bytes in form a string.Reads n bytes,If no n specified
+reads the entire file
+  filename.read(n)
+@ readline(): Reads a line of the file and returns in form of a string

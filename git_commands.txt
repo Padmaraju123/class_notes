@@ -1,0 +1,159 @@
+1)how to create user name in git
+    #git config --global user.name "padmaraju"
+
+2)how to create user email in git
+    #git config --global user.email "padmraju@gmail.com"
+
+3)To check the whether username and useremail created or not
+    #git config --list
+
+SENDER COMMANDS
+4)to start a git repo
+    #git init
+
+5)to send the file from working space to staging place
+    #git add filename
+
+6)to send the file from staging space to local repo
+    #git commit -m "message"
+
+7)to know the status of repo
+    #git status
+
+8)to know the information
+    #git log
+
+9)to know the update the code by other with commit id
+    #git show commit_id
+
+10)now you want to add the local repo to remote repo (git hub)
+    #git remote add origin repo_url 
+
+11)now to push the file to remote repo after the above command
+    #git push -u origin master
+    note:by default master is the branch
+
+12)to update the code 
+    #cat > filename
+    NOTE : we can see the previous code by history button in git hub
+
+RECEIVER COMMANDS
+13)create a folder in git bash
+    #mkdir foldername
+
+14)convert into git folder
+    #git init
+
+15)to link the git hub 
+    #git remote add origin url_of_repo_for_pull
+
+16)now to pull the files to our local repo
+    #git pull -u origin master
+
+17)now to see the information
+    #git log
+
+18)to know what sender done by sender id
+    #git show commit_id
+
+Now the receiver do some thing on the files
+19)now to send the files from working space to staging space
+    #git add .
+
+20)now send the files to staging space to receiver local storage
+    #git commit -m "message"
+
+21)now to push the updated code files to git hub
+    #git push origin master
+
+
+ignore the some files (like to .py or .go)
+22)create a folder and enter into it
+    #mkdir folder
+    #cd folder
+
+23)then create a .gitignore file
+    #vi .gitignore
+
+24)by above command write which .extensions files to ignore
+    *.css  (or) *.py 
+25)now send the files from working place to staging place
+    #git add .gitignore
+26)now send the files from staging place to local repo
+    #git commit -m "message"
+
+27)now create files 
+    #touch file1.txt file2.txt file3.py
+
+28)now if you check the status it shows only the files which were not mention in .gitignore file
+    #git status
+
+29)now add the files means from working place to staging place
+    #git add .
+
+29)now commit means from staging place to local repo
+    #git commit -m "not ignore files"
+
+30)now if you create .py files in the folder
+    #touch file.py
+31)if you check the status it wont show that files because we mentioned in .gitignore file
+32)to see the latest log 
+    #git log -1
+
+
+How to create branch
+
+1)what is master branch?
+    #whenever we enter a git init command it will create a master branch
+2)what is branch?
+    #if you copy the code then it will create branch of master branch
+
+3)to see list of available branches and put the star infront of branch which stands for current branch where we are.
+    #git branch
+
+4)to list out the commits in the repo
+    #git log --oneline
+
+5)to create branch 
+    #git branch branch_name
+    note : if you see the copied files in newly created branch enter ls
+    and enter the updated code 
+    1)to replace the code from master branch in new branch
+        #cat > filename
+    2)to add the extra code in file
+        #cat >> filename
+    3)if you want create a file in new branch
+        #cat > branch_file
+    4)to save the text in file
+        #enter ctrl+d
+    4)to see the files in folder
+        #ls
+        note : list out the all files (master+subbranch) incase if you add and commit of files in 
+        sub branch then it wont show the files in master 
+    5)to add the file
+        #git add filename
+        note: it will allow to those files belongs to current branch not other branch files
+    6)now commit the file
+        #git commit -m "message"
+         note: it will allow to those files belongs to current branch not other branch files
+    7)to see the commits in one short
+        #git log --oneline
+        note : if your are in sub branch it will show all commits include master
+        other wise if you are in master branch it won't show the sub branch commits
+
+6)how to change the branch
+    #git checkout branch_name
+
+7)how to delete a branch
+    #git branch -d branch_name
+    note: before that checkout by using 6th command 
+
+8)how to merge branch to master
+    #git merge branch
+
+Git Conflict
+
+when same file having different content in different branches 
+if you do merge,conflict occurs
+
+o
