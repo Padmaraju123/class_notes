@@ -2,6 +2,9 @@ cd = change directory
 pwd = print working directory
 ls = list 
 ls -l = list out all the folders and files which are present in the current directory.
+ls -l folder1 = to list out the files and folders in that particular folder1 but the folder must be present in the current directory
+ls -lt = list of files/folders from latest to oldest from top to bottom way.
+ls -ltr = list of files/folders from older to latest from top to bottom way.
 cd .. = used to one step back from the present directory
 su - = used to change my user into root account.su(switch user)
 
