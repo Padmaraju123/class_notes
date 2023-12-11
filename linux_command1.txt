@@ -8,6 +8,10 @@ ls -l file = show the complete description about the file which is present in cu
 ls -lt = list of files/folders from latest to oldest from top to bottom way.
 ls -ltr = list of files/folders from older to latest from top to bottom way.
 
+rmdir folder = to remove the empty folder
+rm -r folder = to remove the entire folder which has files inside it.
+
+
 cd .. = used to one step back from the present directory
 su - = used to change my user into root account.su(switch user)
 
@@ -262,6 +266,7 @@ Each permission can be controlled at three levels:
  chmod u+r filename (here we are add the read permission to the group)
  chmod uo+x filename (here we are adding execute permission to the user and oher)
  chmod ugo+wxr filename (here we are adding all permission to the all)
+ chmod ugo-wxr file1 file2 (here we are denying permissions to user,group,other to the file1 file2)
  chmod a-r filename (here a stands for all)
 
 
