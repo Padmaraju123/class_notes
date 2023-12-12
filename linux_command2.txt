@@ -5,6 +5,7 @@ for file systems.It is designed to assist with Unix file permission.ACL allows y
 to give permissions for any user or group to any disc resources.
 
 Use of ACL:
+
 1)Think of a scenario in which a particular user is not a member of group
 created by you but still you want to give some read or write access,how can you
 do it without making user a member of group,here comes in picture acl 
@@ -147,6 +148,10 @@ note: if the file is not present it will create the file and add the text into i
 2)to change the location of file into another location
   mv  filepath/filename  filepath
 
+3)if you mention newfile name to the destination then it will moved to destination location with given name
+  mv filename path/newname
+
+
 #mkdir
 
 1) to create directory by using this command
@@ -159,8 +164,10 @@ note: if the file is not present it will create the file and add the text into i
 
 2)rm -r is used to forcefully remove the directory as well as inside directories also
   rm -r directoryname
+  rm -Rf directoryname
 
 #chgrp
+
 note : to go with this command we need to be root
 1) it is used to change the group ownership of the file/direc
    chgrp root filename
@@ -180,7 +187,7 @@ note: to change both once we use
     ex: cat filename
 
 # more
- 1) to show the description one page only on the screen.
+ 1) to show the description one page only on the screen whenever you press tab.
     ex: more filename
 
 # less
@@ -208,11 +215,11 @@ by delimiter.byte position and character.
 
 # cut --version == gives the version
 
-# cut -c1 filename == list one character (c1 so first character ,c2 second character)
+# cut -c1 filename == list one character of the all lines (c1 so first character ,c2 second character)
 
-# cut -c1,3,4 filename == list one,third,fourth characters of the file.
+# cut -c1,3,4 filename == list one,third,fourth characters of the lines in the file.
 
-# cut -c1-5 filename  == list range of characters 
+# cut -c1-5 filename  == list range of characters of the all lines in the file.
 
 # cut -c1-3,7-9 filename  == list specific range of characters
 
