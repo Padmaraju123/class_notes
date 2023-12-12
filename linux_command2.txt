@@ -221,7 +221,7 @@ by delimiter.byte position and character.
 
 # cut -c1-5 filename  == list range of characters of the all lines in the file.
 
-# cut -c1-3,7-9 filename  == list specific range of characters
+# cut -c1-3,7-9 filename  == list specific range of characters of all lines in the file.
 
 # cut -b1-4 filename == list the range with byte size
 
@@ -256,14 +256,14 @@ a file or from an output.
 #The grep command which stands for "global regular expression print" processes text line by line and prints
 any lines which match a specified pattern
 
-1) grep --version          gives the version
-2) grep keyword filename   search for a keyword in a file
-3) grep -c keyword filename   search for a keyword and count
-4) grep -i keyword filename   search for a keyword ignore case-sensitive
-5) grep -n keyword filename   Display the matched lines and their line numbers
-6) grep -v keyword filename   display the unmatched lines 
+1) grep --version      =   gives the version
+2) grep keyword filename  = search for a keyword in a file
+3) grep -c keyword filename  = search for a keyword and gives the count for how many lines the keyword is comes.
+4) grep -i keyword filename =  search for a keyword ignore case-sensitive
+5) grep -n keyword filename  = Display the matched lines and their line numbers
+6) grep -v keyword filename =  display the unmatched lines 
 7) grep keyword filename | awk '{print $1}' === search for a keyword and then only give the 1st field
-8) ls -l | grep Desktop      === Search for a keyword and then only gives that lines
+8) ls -l | grep Desktop = Search for a keyword and then only gives that lines
 9) egrep -i "keyword1|keyword2" filename == gives the lines which matches either keyword
 10) egrep -i "key1|key2...|keyN" filename == gives the lines which matches the either keyword
 
