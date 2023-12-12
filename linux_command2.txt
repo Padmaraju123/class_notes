@@ -111,7 +111,7 @@ note: ls -la (here a gives us all files include .files also)
 to the input of another command.
 
 The symbol for pipe is the vertical bar(|)
- syntax: command | command
+ syntax: command options arguments | command options arguments
   ex: ls -ltr | more 
   (here the output of ls -ltr goes to input of more command 
     the more is used to display the data into one page.)
@@ -124,7 +124,16 @@ The symbol for pipe is the vertical bar(|)
    cp file1 file2
 
 2) copying one file into another location
-  cp file1 filepath / cp file1 directory
+  cp file1 filepath 
+  cp file1 directory
+note: what ever the text present it will redirect to the file with same name
+ cp file1 filepath/newfile.txt 
+note: what ever the text present it will redirect to the file with given name 
+
+#echo : it is command used to add the text into the file or append the text to the existing file
+note: if the file is not present it will create the file and add the text into it.
+  echo message > filename   (to add)
+  echo message >> filename  (to append)
 
 #rm 
 
