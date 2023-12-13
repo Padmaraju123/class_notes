@@ -1,5 +1,5 @@
 cd = change directory
-cd absolutepath/filepath
+cd absolutepath(or)filepath
 cd .. = used to one step back from the present directory
 cd ../../..  N = To step upto require double dots from the current directory.
 note : cd works only to the directories.
@@ -12,6 +12,7 @@ ls = list
 ls -l = list out all the folders and files which are present in the current directory.
 ls -a = to show the hiddened files also.
 ls -l folder1 = to list out the files and folders in that particular folder1 but the folder must be present in the current directory.
+ls -l filepath = to list of files and folders in that particular path folder.
 ls -l file = show the complete description about the file which is present in current directory.
 ls -lt = list of files/folders from latest to oldest from top to bottom way.
 ls -ltr = list of files/folders from older to latest from top to bottom way.
@@ -191,7 +192,6 @@ for understand that no is inode.
 softlink = link will be removed if file is removed or renamed.
 command = ln -s locationpath (do in /tmp directory)
 
-
 hard link = deleting renaming or moving the original file will
 not affect the hard link.
 command = ln
@@ -199,9 +199,6 @@ command = ln
 finally if you change/delete any thing to the source of softlink it will automatically 
 affect to the softlink in /tmp
 but for hard link it won't effect the destination file in /tmp
-
-
-
 
 note: you cannot create soft or hard link within the same directory
 with the same name.that is why we will create lonks in /tmp directory.
@@ -239,8 +236,9 @@ ex: ls(command)  -l(one option after -)   filename(argument)
 ex: ls(command)  -ltr(group option after-)  filename(argument)
 
 #to remove the directory forcefully use command
-  rm -r directoryname    (to delete the direct directory)
-  rm -r filepath/directory  filepath/directory  (to delete the directory by specify the absolute path)
+  rmdir directoryname    (to delete the empty directory)
+  rm -r directory        (to delete the directory which has files inside it)
+  rm -r filepath/directory  filepath/directory  (to delete the different directories by specify the absolute path)
 
 # to know the particular command use this command
   man(manual) command
