@@ -20,3 +20,11 @@ Linux File Editor
 @ d = delete
 @ :q! = quit without saving
 @ :wq! = quit with saving
+
+## commands works out of the insert mode.
+# d = enter d to delete the one line in the file (or) just delete by backspace
+# u = enter u to get back the deleted line after came back to insert mode
+# r = to replace single character by placing cursor then enter the character you wish.
+# o = enter o for next line will be empty line.
+# x = enter to delete one character.
+# /word = to search a particular word in the file
