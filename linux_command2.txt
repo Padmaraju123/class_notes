@@ -282,12 +282,16 @@ any lines which match a specified pattern
   ex: sort filename    (reverse order)
   ex: sort filepath/filename     (reverse order)
 
-4) sort -k2 filename (here to order by second field text)
+4) sort -k2 filename (here to order by second words of the all lines field text)
    sort -k2 filepath/filename  (here to do by filepath after)
+   sort -kN filename  (here we are sorting N column word in each line)
    ls -ltr | sort -k9  
 
+# uniq = it will removes the duplicate lines
+note : if you run only "uniq filename" it won't work before doing file must the sorted
+
 5) sort file | uniq  (always sort first before using their line numbers)
-6) sort file | uniq -c  (sort first then uniq and list count)
+6) sort file | uniq -c  (sort first then uniq and list count of repeated lines)
 7) sort file | uniq -d  (only show repeated lines)
 
 @@ WC 
