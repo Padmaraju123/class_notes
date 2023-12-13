@@ -1,1 +1,22 @@
+module 5 : System Administration
 
+Linux File Editor
+# A text editor is a program which enables you to create and manipulate data(text) in a Linux file.
+
+#There are several standard editors available on most Linux systems
+@ vi,ed,ex,emacs,pico,vim
+
+# vi supplies commands for:
+@ inserting and deleting text.
+@ Replacing text.
+@ Moving around the file.
+@ Finding and substituting strings
+@ Cutting and pasting text
+
+#Most common keys
+@ i = insert
+@ Esc = Escape out of any mode
+@ r = replace 
+@ d = delete
+@ :q! = quit without saving
+@ :wq! = quit with saving
