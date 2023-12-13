@@ -1,18 +1,26 @@
 cd = change directory
+cd absolutepath/filepath
+cd .. = used to one step back from the present directory
+cd ../../..  N = To step upto require double dots from the current directory.
+note : cd works only to the directories.
+
 pwd = print working directory
+
+#ls
 
 ls = list 
 ls -l = list out all the folders and files which are present in the current directory.
+ls -a = to show the hiddened files also.
 ls -l folder1 = to list out the files and folders in that particular folder1 but the folder must be present in the current directory.
 ls -l file = show the complete description about the file which is present in current directory.
 ls -lt = list of files/folders from latest to oldest from top to bottom way.
 ls -ltr = list of files/folders from older to latest from top to bottom way.
+ls -lr = list of files/folders in reverse order
 
+#remove the directory
 rmdir folder = to remove the empty folder
 rm -r folder = to remove the entire folder which has files inside it.
 
-
-cd .. = used to one step back from the present directory
 su - = used to change my user into root account.su(switch user)
 
 1) if you enter only cd we enter into /root bez we are root 
@@ -59,15 +67,12 @@ ex:cd /var
    cd log
    cd samba
 
-Creating files and directories
-
-Creating files
+#Creating files
 
 1) touch filename = create a empty file
 
    ex: touch directory/emptyfilename   (here we have directory name)
    ex: touch Documents/file1  Downloads/file2  Music/file3    (to create file by choosing different directories)
-
 
    touch filename1 filename2......filenameN = create N number of empty files. (for multiple files no option only this thing)
 
