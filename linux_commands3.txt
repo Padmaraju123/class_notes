@@ -98,10 +98,19 @@ Commands
   note: you must be root to do these.
 
 @ groupadd
+  # to create a group 
+    groupadd groupname
+  # to check the group 
+    cat /etc/group
   
-# userdel
-# groupdel
-# usermod
+@ userdel
+  # userdel -r username
+
+@ groupdel
+  # groupdel groupname
+
+@ usermod = it is used to add groupname to the username which has same groupname itself
+  # usermod -G groupname username
 
 # whenever we do above commands the description will store in different files
 @ /etc/passwd
