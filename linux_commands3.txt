@@ -28,3 +28,38 @@ Linux File Editor
 # o = enter o for next line will be empty line.
 # x = enter to delete one character.
 # /word = to search a particular word in the file
+
+# SED command
+uses:
+@ Replace a string in a file with a new string.
+@ Find and delete a line.
+@ Remove empty lines.
+@ Remove the first or n lines in a file.
+@ To replace tabs with spaces.
+@ Show defined lines from a file.
+@ Substitute within vi editor.
+
+# replace a string in a file with a new string
+  sed 's/oldname/newname/g' filename 
+ # s = substitute
+ # g = substitute to all with in the file.
+note : the above command changes only to display it at the time only still the file has no changes
+
+# to replace it permanently 
+  sed -i 's/oldname/newname/g' filename.
+
+#to remove the strings 
+  sed 's/oldname//g' filename
+note : only on that time 
+  sed -i 's/oldname//g' filename
+
+# find a string in a line and delete the line.
+  sed '/word/d' filename
+  d = delete
+  sed -i '/word/d' filename
+
+# to delete the empty line of the file 
+  sed -i '/^$/d' filename
+
+# to delete particular line of the line
+ sed -i 'Nd' filename  
