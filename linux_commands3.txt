@@ -82,3 +82,30 @@ note : only on that time
 # to substitute every word with new word in vi editor
 note : the mode must be not in insert mode
   :%s/oldname/newname/g
+
+User Account Management
+Commands
+@useradd
+  # to create a new user 
+    useradd username
+
+  # for aws Ec2 the command is different
+    sudo useradd -m -s /bin/bash username
+
+  # to check whether it create or not
+    id spiderman
+
+  note: you must be root to do these.
+
+@ groupadd
+  
+# userdel
+# groupdel
+# usermod
+
+# whenever we do above commands the description will store in different files
+@ /etc/passwd
+@ /etc/group
+@ /etc/shadow
+
+ex: useradd -g 
