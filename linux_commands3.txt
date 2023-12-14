@@ -62,4 +62,19 @@ note : only on that time
   sed -i '/^$/d' filename
 
 # to delete particular line of the line
- sed -i 'Nd' filename  
+ sed -i 'Nd' filename
+
+# to replace tab with space in the file
+  sed -i 's/\t//g' filename
+
+# to show the defined range(m to k) of lines m=10 , n=12
+  sed -n 10,12p filename
+
+# to exclude the range of lines 
+  sed 10,12d filename
+
+# to add empty line after every line of the file.
+  sed G filename
+
+# to exclude particular word in a line and replace to all words in the file ex:8
+  sed '8!s/oldname/newname/g' filename
