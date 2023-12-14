@@ -78,3 +78,7 @@ note : only on that time
 
 # to exclude particular word in a line and replace to all words in the file ex:8
   sed '8!s/oldname/newname/g' filename
+
+# to substitute every word with new word in vi editor
+note : the mode must be not in insert mode
+  :%s/oldname/newname/g
