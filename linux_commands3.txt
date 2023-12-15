@@ -122,3 +122,7 @@ ex: useradd -g
 # date (to show the day and date with time)
 # free (The free command in Linux displays information about total, used, and free memory, including swap space.)
 # top  (The top command in Linux provides real-time information about system resource usage, including CPU, memory, and processes.)
+# cal (to display the current month calender.)
+# tail filename (to show bottom 10 lines of the file)
+# df (The df command in Linux shows disk space usage for file systems.)
+# ping (The ping command in Linux is used to test network connectivity to a specified host)
