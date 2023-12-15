@@ -118,3 +118,7 @@ Commands
 @ /etc/shadow
 
 ex: useradd -g 
+
+# date (to show the day and date with time)
+# free (The free command in Linux displays information about total, used, and free memory, including swap space.)
+# top  (The top command in Linux provides real-time information about system resource usage, including CPU, memory, and processes.)
