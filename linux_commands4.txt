@@ -1,1 +1,10 @@
 94. Linux Account Authentication
+  # if you have thousand of users to the system then how can we manage those users and change the passwords
+  # let say you have to create a user to the multiple servers for that to login to every server and create the user it is not a good thing 
+    right 
+  # for that they create the directory service where user could log in having the authentication through a different server.
+
+@@ Types of Accounts 
+  # Local accounts  == here we create user locally 
+  # Domain/Directory accounts == here we create the users to multiple servers then we have a domain or directory accounts on server
+
