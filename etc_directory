@@ -37,6 +37,11 @@ note : In etc directory has a lot of files but we will focus few files that we w
     The /etc/hostname file in Linux contains the hostname of the system. The hostname is the name by which the system identifies itself on a network.
     This file typically contains a single line with the hostname, and its primary purpose is to store and retrieve the system's assigned name.
     The hostname is used for network communication and can be important for various network-related configurations.
+
+# /etc/hosts
+    
+    The /etc/hosts file in Linux is a simple text file used to map IP addresses to hostnames locally on the system.
+    It allows the system to resolve domain names to IP addresses without relying on a DNS (Domain Name System) server.
     
 
 
