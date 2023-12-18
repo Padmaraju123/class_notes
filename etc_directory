@@ -3,4 +3,11 @@
 that are used by the system and various applications. 
 
 ## 
-Configuration files are plain text files used by software applications to store settings and parameters. These files contain instructions that define how the software should behave or operate. Users and administrators can edit these files to customize the behavior of the software according to their preferences or specific requirements. Configuration files help separate the settings of an application from its code, making it easier to modify the software's behavior without changing its underlying program.
+Configuration files are plain text files used by software applications to store settings and parameters.
+These files contain instructions that define how the software should behave or operate. 
+Users and administrators can edit these files to customize the behavior of the software 
+according to their preferences or specific requirements. Configuration files help 
+separate the settings of an application from its code, making it easier to modify 
+the software's behavior without changing its underlying program.
+
+
