@@ -39,9 +39,14 @@ note : In etc directory has a lot of files but we will focus few files that we w
     The hostname is used for network communication and can be important for various network-related configurations.
 
 # /etc/hosts
-    
     The /etc/hosts file in Linux is a simple text file used to map IP addresses to hostnames locally on the system.
     It allows the system to resolve domain names to IP addresses without relying on a DNS (Domain Name System) server.
+
+# /etc/network
+    The /etc/network directory in Linux contains configuration files for managing network settings.
+    These files help define how the system interacts with the network, including details about network interfaces,
+    IP addresses, and related parameters. It plays a crucial role in configuring and maintaining network connectivity for the system
+    
     
 
 
