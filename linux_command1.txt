@@ -42,6 +42,7 @@ as root directory.
 3) root home directory: The user account also has a directory
 located in /root which is called root home directory.
 
+note: to enter the command "exit" to come out from root 
 
 main points
 - = regular file
@@ -76,9 +77,7 @@ ex:cd /var
 
    ex: touch directory/emptyfilename   (here we have directory name)
    ex: touch Documents/file1  Downloads/file2  Music/file3    (to create file by choosing different directories)
-
-   touch filename1 filename2......filenameN = create N number of empty files. (for multiple files no option only this thing)
-
+   ex: touch filename1 filename2......filenameN = create N number of empty files. (for multiple files no option only this thing)
 
 2) cp existingfile newfile = Is used to copy text of existingfile and created into newfile.
 
