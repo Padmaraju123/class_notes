@@ -10,6 +10,39 @@
 
 module - 7
 138) Enable internet on linux VM
+
   # we will cover different components of networking and how the networking works in a linux environment but before allow the network 
   we have to give internet access to the vm.
+  steps:
+    # Open Virtualbox manager
+    # Select the machine you cannot get internet on in the left pane.
+    # Click the settings button in the top menu.
+    # Click Network in the left pane in the settings window.
+    # Switched to Bridged Adaptor in the Attached to drop-down menu.
+    # Hit OK to save your changes.
+    # Start your VM.
+
+139) Network Components
+  ## IP
+  ## Subnet mask
+  ## Gateway
+      In networking, a gateway is a device or a node in a computer network that serves as an entry and exit point for data traffic.             Gateways are used to connect different networks that may use different communication protocols, data formats, or architectures.           They facilitate communication between networks by translating and forwarding data between them.
+
+      Here are a few types of gateways commonly used in networking:
+
+      Router as a Gateway:
+        In many home or small office networks, a router often serves as a gateway. It connects the local network to the internet and              manages the flow of data between the local network and the external network (typically the internet).
+        Routers use protocols such as TCP/IP to enable communication between devices on the local network and devices on remote networks
+
+      Default Gateway:
+        In TCP/IP networks, the default gateway is a specific router that is designated for forwarding traffic from the local network to          destinations outside the local network (e.g., the internet).
+        When a device in a local network wants to communicate with a device outside the local network, it sends the data to the default           gateway, which then forwards it to the appropriate destination.
+
+      API Gateway:
+        In the context of web services and APIs (Application Programming Interfaces), an API gateway is a server that acts as an API              front-end, receiving API requests, enforcing throttling and security policies, passing requests to the back-end service, and             then passing the response back to the requester.
+
+  ## static vs DHCP 
+  ## interface
+  ## interface MAC address
+  
 
