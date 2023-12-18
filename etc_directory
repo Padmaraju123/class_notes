@@ -20,7 +20,11 @@ note : In etc directory has a lot of files but we will focus few files that we w
     home directories, and login shells.
     note : while it does contain additional information, the primary purpose of /etc/passwd is to store user account details,
     with the password aspect usually managed separately in the /etc/shadow file for security reasons.
-# /etc/
+
+# /etc/shadow
+    the /etc/shadow file in Linux stores encrypted passwords and additional security settings for user accounts. 
+    It keeps this sensitive information secure by restricting access to only the root user.
+    The file includes details such as when the password was last changed, when it will expire, and other security-related parameters.
     
 
 
