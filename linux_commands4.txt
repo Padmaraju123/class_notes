@@ -8,3 +8,8 @@
   # Local accounts  == here we create user locally 
   # Domain/Directory accounts == here we create the users to multiple servers then we have a domain or directory accounts on server
 
+module - 7
+138) Enable internet on linux VM
+  # we will cover different components of networking and how the networking works in a linux environment but before allow the network 
+  we have to give internet access to the vm.
+
