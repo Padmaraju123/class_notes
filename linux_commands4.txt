@@ -39,7 +39,10 @@ module - 7
         When a device in a local network wants to communicate with a device outside the local network, it sends the data to the default           gateway, which then forwards it to the appropriate destination.
 
       API Gateway:
-        In the context of web services and APIs (Application Programming Interfaces), an API gateway is a server that acts as an API              front-end, receiving API requests, enforcing throttling and security policies, passing requests to the back-end service, and             then passing the response back to the requester.
+        In the context of web services and APIs (Application Programming Interfaces), an API gateway is a server that acts as an API              front-end, receiving API requests, enforcing throttling and security policies, passing requests to the back-end service, and              then passing the response back to the requester.
+
+      Firewall as a Gateway:
+         A firewall often serves as a gateway between a private network and the public internet. It regulates the incoming and outgoing            network traffic based on an organization's previously established security policies.
 
   ## static vs DHCP 
   ## interface
