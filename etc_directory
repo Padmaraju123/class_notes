@@ -25,6 +25,12 @@ note : In etc directory has a lot of files but we will focus few files that we w
     the /etc/shadow file in Linux stores encrypted passwords and additional security settings for user accounts. 
     It keeps this sensitive information secure by restricting access to only the root user.
     The file includes details such as when the password was last changed, when it will expire, and other security-related parameters.
+# /etc/group
+    The /etc/group file in Linux contains information about user groups on the system.
+    Each line in this file represents a group and includes details such as the group name, group password (which is rarely used), 
+    group ID (GID), and a list of users who are members of that group. 
+    This file helps manage user groups, which are collections of user accounts that share common 
+    permissions and access rights to files and resources on the system.
     
 
 
