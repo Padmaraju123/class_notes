@@ -13,4 +13,9 @@ the software's behavior without changing its underlying program.
 ## while it does contain additional information, the primary purpose of /etc/passwd is to store user account details, 
 with the password aspect usually managed separately in the /etc/shadow file for security reasons
 
+note : In etc directory has a lot of files but we will focus few files that we will discuss.
+
+# /etc/passwd 
+    
+
 
