@@ -16,6 +16,11 @@ with the password aspect usually managed separately in the /etc/shadow file for 
 note : In etc directory has a lot of files but we will focus few files that we will discuss.
 
 # /etc/passwd 
+    This file stores user account information. It includes usernames, encrypted passwords, user IDs (UIDs), group IDs (GIDs), 
+    home directories, and login shells.
+    note : while it does contain additional information, the primary purpose of /etc/passwd is to store user account details,
+    with the password aspect usually managed separately in the /etc/shadow file for security reasons.
+# /etc/
     
 
 
