@@ -12,6 +12,7 @@ ls = list
 ls -l = list out all the folders and files which are present in the current directory.
 ls -a = to show the hiddened files also.
 ls -l folder1 = to list out the files and folders in that particular folder1 but the folder must be present in the current directory.
+ls -l folder1 folder2 ... folderN == to list the multiple folders at once
 ls -l filepath = to list of files and folders in that particular path folder.
 ls -l file = show the complete description about the file which is present in current directory.
 ls -lt = list of files/folders from latest to oldest from top to bottom way.
