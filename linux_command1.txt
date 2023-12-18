@@ -21,6 +21,7 @@ ls -lr = list of files/folders in reverse order
 
 #remove the directory
 rmdir folder = to remove the empty folder
+rmdir folder1 folder2 ... folderN  = to delete the multiple folders
 rm -r folder = to remove the entire folder which has files inside it.
 
 su - = used to change my user into root account.su(switch user)
