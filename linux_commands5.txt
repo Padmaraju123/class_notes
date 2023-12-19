@@ -55,7 +55,14 @@ Io : The loopback device is a special interface that your computer uses to commu
     @ vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
     @ Delete the entire content
     @ Add the following parameters
-  
+        # TYPE = ETHERNET
+        # BOOTPROTO = none
+        # DEVICE = enp0s3
+        # ONBOOT = yes
+        # HWADDR = "MAC from the ifconfig command"
+        # MASTER = bond0
+        # SLAVE = yes
+    @ Save and exit the file 
 
 
 
