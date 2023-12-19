@@ -64,6 +64,17 @@ Io : The loopback device is a special interface that your computer uses to commu
         # SLAVE = yes
     @ Save and exit the file 
 
+179) System Run levels
+    # These are the run levels in the system in the operating system that brings the system in a different mode.
+    # In linux we have six different kind of system run levels
+    # Main run levels that are significantly used many times by the system administrator is 
+      @ init 0 = shut down (or halt) the system.
+      @ init 1 (or) init s (or) init S = Single-user mode 
+    # other run levels 
+      @ init 2 = Multiuser mode without networking
+      @ init 3 = Multiuser mode with networking
+      @ init 5 = Multiuser mode with networking and GUI
+
 
 
 
