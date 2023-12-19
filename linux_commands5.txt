@@ -45,10 +45,18 @@ Io : The loopback device is a special interface that your computer uses to commu
     BONDING MASTER = yes
     BOOTPROTO=none
     ONBOOT = yes
-    IPADDRESS = 192.168.1.80
+    IPADDR = 192.168.1.80
     NETMASK = 255.255.255.0
     GATEWAY = 192.168.1.1
     BONDING OPTS = "mode=5 miimon=100"
+  @ Save and exit the file
+
+## Edit the first NIC file 
+    @ vi /etc/sysconfig/network-scripts/ifcfg-enp0s3
+    @ Delete the entire content
+    @ Add the following parameters
+  
+
 
 
 
