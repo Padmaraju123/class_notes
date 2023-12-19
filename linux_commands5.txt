@@ -20,3 +20,11 @@ Wi-Fi NIC: Used for wireless connections, allowing devices to connect to Wi-Fi n
 Fiber NIC: Designed for high-speed fiber optic network connections.
 Token Ring NIC: Historically used for token ring networks (now less common).
 Driver Software: NICs require driver software to interface with the operating system of the computer. Operating systems come with built-in drivers for common NICs, but specialized or newer NICs may require additional driver installation.
+
+# To know the information about the NIC the command is
+    ethtool name_of_nic
+note : to know the name of the nic run the command "ifconfig"
+## we will see multiple interfaces like Io
+Io : The loopback device is a special interface that your computer uses to communicate with itself. It is used mainly for diagnostics
+      and troubleshooting, and to connect to servers running on the local machine.
+    
