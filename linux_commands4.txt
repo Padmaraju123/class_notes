@@ -47,5 +47,13 @@ module - 7
   ## static vs DHCP 
   ## interface
   ## interface MAC address
+
+140) Network files and commands
+    # There are many network files and commands that need to used in order to configure your machine and bring into online or bring into 
+    the network so it could communicate from one machine to another machine 
+    # the machine must has
+        @@ interface detection
+        @@ assigning Ip address 
+        @@ interface configuration files
   
 
