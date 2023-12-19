@@ -60,5 +60,11 @@ module - 7
             ## /etc/sysconfig/network
             ## /etc/sysconfig/network-scripts/ifcfg-nic
             ## /etc//resolv.conf
+    # Network commands
+      @@ ping
+      @@ ifconfig
+      @@ ifup or ifdown
+      @@ netstat
+      @@ tcpdump
   
 
