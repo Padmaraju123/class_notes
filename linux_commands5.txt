@@ -27,4 +27,9 @@ note : to know the name of the nic run the command "ifconfig"
 ## we will see multiple interfaces like Io
 Io : The loopback device is a special interface that your computer uses to communicate with itself. It is used mainly for diagnostics
       and troubleshooting, and to connect to servers running on the local machine.
+
+## NIC bonding or PORT bonding
+  # NIC bonding is also known as Network bonding. it can be defined as the aggregation or combination of multiple NIC into a single bond      interface.
+  # It's main purpose is to provide high availability and redundancy.
+
     
