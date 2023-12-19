@@ -55,5 +55,10 @@ module - 7
         @@ interface detection
         @@ assigning Ip address 
         @@ interface configuration files
+            ## /etc/nsswitch.conf
+            ## /etc/hostname
+            ## /etc/sysconfig/network
+            ## /etc/sysconfig/network-scripts/ifcfg-nic
+            ## /etc//resolv.conf
   
 
