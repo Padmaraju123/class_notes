@@ -80,7 +80,7 @@ ex:cd /var
    ex: touch Documents/file1  Downloads/file2  Music/file3    (to create file by choosing different directories)
    ex: touch filename1 filename2......filenameN = create N number of empty files. (for multiple files no option only this thing)
 
-2) cp existingfile newfile = Is used to copy text of existingfile and created into newfile.
+2) cp existingfile newfile = It used to copy text of existing file and pasted to into new file.
 
    ex: cp filepath/oldname  filepath/newfile     (here by doing absolute path to copy the file)
    ex: cp oldfile newfile                        (here directly copy the file into newfile)
