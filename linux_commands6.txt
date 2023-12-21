@@ -8,5 +8,6 @@
         @@ Init = Init executes run level programs
         @@ Runlevel = Run level programs are executed from /etc/rc.d/rc*.d/
 
-# 
+# first step every time to press the power button it goes to BIOS 
+
 
