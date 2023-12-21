@@ -10,4 +10,7 @@
 
 # first step every time to press the power button it goes to BIOS 
 
+146) curl and ping command
+    ## these two commands are very useful when you trouble shooting the network related issues.
+
 
