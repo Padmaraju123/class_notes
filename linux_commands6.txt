@@ -12,5 +12,7 @@
 
 146) curl and ping command
     ## these two commands are very useful when you trouble shooting the network related issues.
+        ex: if you browse the website or server we didn't get response back then by using some network related commands
+            we can identify the issue.
 
 
