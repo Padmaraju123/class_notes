@@ -16,5 +16,7 @@
             we can identify the issue.
         By using the any web browser we can type the website name in search bar and checks it is working or not so here it is
         GUI right that why we know but when it comes to CLI how can it will be so by using the network commands we can do it.
+    ## In linux the command used to find the HTTP response is "curl"
+    ## "ping ip(or)hostname" to find the whether the server is responding or not. 
 
 
