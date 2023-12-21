@@ -1,1 +1,2 @@
-
+181) Linux Boot process
+    # when you power on the system or pc there will be an boot process to show the display to the users.
