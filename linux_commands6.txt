@@ -3,5 +3,10 @@
     ## there are six steps will happened under the boot process
         @@ BIOS = Basic Input/Output System executes MBR
         @@ MBR = Master Boot Record executes GRUB
-        @@ GRUB = 
+        @@ GRUB = Grand Unified Bootloader executes Kernel
+        @@ Kernel = Kernel executes /sbin/in it
+        @@ Init = Init executes run level programs
+        @@ Runlevel = Run level programs are executed from /etc/rc.d/rc*.d/
+
+# 
 
