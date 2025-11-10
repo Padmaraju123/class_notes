@@ -1,0 +1,65 @@
+Power shell
+A command-line shell → lets you type and run commands directly (like CMD or Terminal).
+A scripting language → lets you write scripts (automation programs) to perform tasks automatically.
+
+PowerShell is a command-line shell and scripting language. This means that we can run individual commands within the terminal as well as create and execute more
+complex scripts. Both are equally useful when automating computer administration tasks.While most computing interfaces involve a GUI, Graphical User Interface,
+there is a clear reason why developers and administrators still use command-line tools like PowerShell: they are just better at certain tasks.
+If we look at essential file system management, creating folders for 20 users might involve dozens or hundreds of mouse movements and clicks using a graphical interface.
+Alternatively, a single command in the PowerShell terminal can take a list of names and create folders for each
+
+----------------------------------------------------
+command 1
+Write-Host "Hello, World!"
+
+output:
+prints "Hello, World!" to the console
+-----------------------------------------
+command 2
+Get-Date
+
+output:
+Friday, November 7, 2025 11:15:00 AM
+
+It shows:
+Day of the week
+Full date
+Current time
+-----------------------------------------------------
+Get-Command will output all available CmdLets
+
+--------------------------------------------------------------
+command
+Get-Command -Verb Get
+
+output
+This command lists all PowerShell commands (called cmdlets, functions, etc.) that start with the verb "Get".
+---------------------------------------------
+command
+Get-Command -Noun Host
+
+output:
+This command lists all commands (cmdlets, functions, etc.) that use the noun "Host".
+Why we use it:
+
+To find commands related to the host environment, like the console or terminal.
+Helps you discover commands like:
+
+Get-Host – shows info about the current PowerShell host.
+Write-Host – prints text to the console.
+----------------------------------------------------------------------------------------------------------
+command
+Clear-Host or cls
+
+output:
+It clears the console screen in PowerShell.
+----------------------------------------------------------------------------
+command
+Get-History
+
+output:
+Get-History shows a list of commands you've run in the current PowerShell session.
+
+
+
+
