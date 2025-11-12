@@ -1,0 +1,61 @@
+User Input
+
+Now that we can hold data using variables, we can look at a useful command that enables user input through the terminal.
+PS > $my_input = Read-Host -Prompt "Enter a number"
+The above example will output the -Prompt string and then wait for the user to input a value and hit Enter. The value will then be stored in $my_input for use later.
+-------------------------------------
+
+Variable Types and Advanced Usage
+In this exercise, we will discuss how variable types are handled in PowerShell and a few advanced ways to interact with variables, including enforcing types, creating multiple variables, and a few variable-related cmdlets.
+
+Variable Types
+The following are some common types of variables:
+
+Int: integers like 2, -5, 99
+String: zero or more characters enclosed in double quotes like "Codecademy!", "3X4mP|3"
+Boolean: two possible values: $True and $False
+Array: a collection of items like 25, "red", $False, 16.30
+PowerShell assigns a type to the variable depending on the value we assign to it. This is called dynamic typing. The default type of any uninitialized variable is $null.
+
+We can append .GetType().Name to the variable reference to determine a variable’s data type.
+
+PS > $my_string_variable = "Hello, World!"
+PS > $my_string_variable.GetType().Name
+String
+
+Copy to Clipboard
+
+In the example above, we are accessing the Name property of the GetType() method of a variable we initialized.
+
+The GetType() method returns the name and base type property for a variable
+Accessing the Name property only returns the data type we desire
+The variable’s data type is String
+Constrained Variables
+If we wish to enforce a certain type on a variable, we can create a constrained variable via casting.
+
+PS > [Int]$age = 25
+PS > $age
+25
+
+PS > [Int]$age = "twenty five"
+Cannot convert value "age" to type "System.Int32". Error: "Input string was not in a correct format."
+
+Copy to Clipboard
+
+When initializing a variable, we specify the type in brackets before referencing the variable. Attempting to assign a value of another type results in an error if PowerShell cannot convert it.
+
+Create Multiple Variables
+PowerShell allows us to create multiple variables using one statement. To initialize multiple variables with the same value,
+
+$i = $j = $k = 0
+
+Copy to Clipboard
+
+To assign multiple values to multiple variables,
+
+$number, $color, $bool = 25, "red", $false
+
+Copy to Clipboard
+
+We will next discuss a specific type of variable called an environment variable.
+
